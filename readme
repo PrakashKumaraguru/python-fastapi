@@ -1,0 +1,23 @@
+#####Activate the virtual environment:####### 
+step 1:
+ python -m venv venv
+step 2:
+ venv\Scripts\activate
+
+#########Project Dependencies##########
+step 3:
+pip install -r requirements.txt
+
+
+#######to run the fast api######### 
+uvicorn app.main:app --reload
+
+
+####### to run docker image #######
+docker build -t your_image_name .
+
+######## to build container #########
+docker run --name container_name -p 3306:3306 image_name
+
+####### check the appliction in ######
+http://127.0.0.1:8000/docs
